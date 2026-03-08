@@ -1,0 +1,29 @@
+let motorista = prompt("Digite o nome do motorista: ");
+let maxima = parseFloat(prompt("Velocidade Máxima permitida na via: "));
+let registrado = parseFloat(prompt("Velocidade registrada: "));
+
+let excesso = registrado - maxima;
+
+if (registrado <= maxima) {
+
+    console.log("Motorista dentro do limite de velocidade");
+
+} else if (excesso <= 10) {
+
+    console.log("Motorista Multado: " + motorista + ", dirigindo em via de limite " + maxima + " a " + registrado);
+    console.log("Multa de categoria LEVE");
+    console.log("Valor da penalidade R$50");
+
+} else if (excesso <= 20) {
+
+    console.log("Motorista Multado: " + motorista + ", dirigindo em via de limite " + maxima + " a " + registrado);
+    console.log("Multa de categoria MÉDIA");
+    console.log("Valor da penalidade R$100");
+
+} else {
+
+    console.log("Motorista Multado: " + motorista + ", dirigindo em via de limite " + maxima + " a " + registrado);
+    console.log("Multa de categoria GRAVE");
+    console.log("Valor da penalidade R$200");
+
+}
